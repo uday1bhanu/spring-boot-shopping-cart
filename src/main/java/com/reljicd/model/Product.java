@@ -31,6 +31,9 @@ public class Product {
     @DecimalMin(value = "0.00", message = "*Price has to be non negative number")
     private BigDecimal price;
 
+    @Column(name = "url")
+    private String url;
+
     public Long getId() {
         return id;
     }
@@ -69,6 +72,14 @@ public class Product {
 
     public void setPrice(BigDecimal unitPrice) {
         this.price = unitPrice;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 
     @Override
